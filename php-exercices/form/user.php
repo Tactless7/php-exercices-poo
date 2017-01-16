@@ -16,3 +16,6 @@
 
 	$juliane = new User($_GET,'first_name', 'last_name');
 	$juliane->displayUser();
+
+	$newUser = new User($_POST, 'first_name', 'last_name');
+	$newUser->displayUser();
