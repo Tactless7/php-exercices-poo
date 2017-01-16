@@ -4,9 +4,9 @@
 		private $_firstName;
 		private $_lastName;
 
-		public function __construct($first, $last){
-			$this->firstName = $first;
-			$this->lastName = $last;
+		public function __construct($method, $first, $last){
+			$this->firstName = $method[$first];
+			$this->lastName = $method[$last];
 		}
 
 		public function displayUser(){
@@ -14,5 +14,5 @@
 		}
 	}
 
-	$juliane = new User($_GET['first_name'], $_GET['last_name']);
+	$juliane = new User($_GET,'first_name', 'last_name');
 	$juliane->displayUser();
