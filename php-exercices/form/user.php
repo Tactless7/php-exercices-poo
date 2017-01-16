@@ -5,12 +5,12 @@
 		private $_lastName;
 
 		public function __construct($method, $first, $last){
-			$this->firstName = $method[$first];
-			$this->lastName = $method[$last];
+			$this->_firstName = $method[$first];
+			$this->_lastName = $method[$last];
 		}
 
 		public function displayUser(){
-			echo "Le nom de l'utilisateur est : $this->firstName $this->lastName";
+			echo "<div>Le nom de l'utilisateur est : $this->_firstName $this->_lastName.</div>";
 		}
 	}
 
